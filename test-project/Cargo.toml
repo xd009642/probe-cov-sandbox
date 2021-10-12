@@ -1,0 +1,18 @@
+[package]
+name = "test-project"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+
+[dev-dependencies]
+defmt = "0.2.3"
+defmt-rtt = "0.2.0"
+defmt-test = "0.2.3"
+
+[profile.dev]
+opt-level = "s"
+
+[[test]]
+name = "gpio-input-floating"
+harness = false
