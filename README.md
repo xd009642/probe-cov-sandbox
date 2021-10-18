@@ -59,8 +59,9 @@ other chips it might be in a different place but the name is fairly standard.
 
 Now the memory map looks like this:
 
-![memmap](images/stm32l476rg_memmap.png)
-Format: ![Some alt text](stm32l476rg memory map)
+![Two columns showing high level and low level regions of memory in the MCU
+in the high level we see SRAM1 stars at 0x20000000 and doesn't have a determined
+end. In the low level we ee flash starts at 0x08000000 and ends at 0x08100000](images/stm32l476rg_memmap.png)
 
 So we're going to pick the region called Flash memory for the flash and the
 origin is `0x0800_0000` and it ends at `0x0810_0000` so I'll set the flash
