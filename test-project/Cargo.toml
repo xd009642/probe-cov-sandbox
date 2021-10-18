@@ -4,15 +4,24 @@ version = "0.1.0"
 edition = "2018"
 
 [dependencies]
+cortex-m = "0.6.0"
+cortex-m-rt = "0.6.10"
+cortex-m-semihosting = "0.3.7"
+panic-halt = "0.2.0"
 
 [dev-dependencies]
+defmt-test = "0.2.3"
 defmt = "0.2.3"
 defmt-rtt = "0.2.0"
-defmt-test = "0.2.3"
 
 [profile.dev]
+debug = true
 opt-level = "s"
 
 [[test]]
 name = "gpio-input-floating"
 harness = false
+
+[profile.release]
+debug = true
+lto = true
