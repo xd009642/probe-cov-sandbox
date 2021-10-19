@@ -8,6 +8,7 @@ cortex-m = "0.6.0"
 cortex-m-rt = "0.6.10"
 cortex-m-semihosting = "0.3.7"
 panic-halt = "0.2.0"
+rtt-target = { version = "0.3.1", features = ["cortex-m"] }
 
 [dev-dependencies]
 defmt-test = "0.2.3"

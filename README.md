@@ -84,10 +84,9 @@ And we get the output: `STM32L476RGTx`, x in hardware language is "don't care"
 so this is probably the pin layout details mentioned before. Now if we were
 pre-probe-rs I'd go over install openocd or setting up a gdb remote instance
 connected to the board. But now life is easier than this, and we can use 
-cargo-embed to program the device and set up semihosting so we can see the
-printout. 
+cargo-embed to program the device and set up our comms link to see the printouts. 
 
-If we didn't use cargo-embed and didn't set up semihosting when we flash the
+If we didn't use cargo-embed and didn't set up the link then when we flash the
 device it would look like nothing happened! But instead the Embed.toml has our
 config info and we can just run:
 
@@ -95,10 +94,12 @@ config info and we can just run:
 cargo-embed --example simple
 ```
 
-And now we should see our printout. *TODO we don't, maybe we do need to sort
-out semihosting ourselves?*
+And now we should see our printout. We're using RTT because it seemed simple
+but semihosting is available for slower printouts that aren' so latency
+critical.
 
-TODO Fill in semihosting things.
+Below is an example of the cargo flash command we'd use to flash this
+example and at some point I'll fill in with how to see the printout as well.
 
 ```
 cargo flash --release --chip STM32L476RGTx --example simple
