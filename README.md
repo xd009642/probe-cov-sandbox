@@ -105,6 +105,10 @@ example and at some point I'll fill in with how to see the printout as well.
 cargo flash --release --chip STM32L476RGTx --example simple
 ```
 
+## Using probe-rs from rust code
+
+TODO our next part
+
 ## Resources
 
 * https://github.com/probe-rs/cargo-flash#prerequisites
