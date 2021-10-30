@@ -107,7 +107,10 @@ cargo flash --release --chip STM32L476RGTx --example simple
 
 ## Using probe-rs from rust code
 
-TODO our next part
+So if we look at `src/main.rs` we can now see some code that is the starting
+point for getting our embedded coverage working. It should be reasonably well
+commented on what it's currently doing and the plan going forwards. And it
+builds off what we did in the previous part.
 
 ## Resources
 
